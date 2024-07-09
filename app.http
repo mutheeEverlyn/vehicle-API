@@ -18,6 +18,9 @@ Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvb
 GET http://localhost:8000/bookings
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
 ######
+GET http://localhost:8000/create-payment-intent
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
+######
 GET http://localhost:8000/bookingsData
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
 ###
@@ -111,12 +114,12 @@ POST http://localhost:8000/register
 Content-Type: application/json
 
 {
-     "full_name":"Evah",
-     "email":"Evah@gmail.com",
+     "full_name":"kimani",
+     "email":"kim@gmail.com",
     "password":"password",
     "contact_phone":"0987654esx",
     "address":"dfgh8765",
-    "role":"admin"
+    "role":"user"
 }
 
 ###
@@ -124,6 +127,6 @@ POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "email": "Evah@gmail.com",
+    "email": "kim@gmail.com",
     "password":"password"
 }
