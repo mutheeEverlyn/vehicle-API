@@ -1,0 +1,41 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "gen": "drizzle-kit generate",
+    "migrate": " tsx src/drizzle/migrate.ts",
+    "studio": "drizzle-kit studio",
+    "push": " drizzle-kit generate && tsx src/drizzle/migrate.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.11.2",
+    "@hono/prometheus": "^1.0.1",
+    "@hono/zod-validator": "^0.2.2",
+    "@neondatabase/serverless": "^0.9.3",
+    "@stripe/stripe-js": "^4.1.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.31.1",
+    "ejs": "^3.1.10",
+    "hono": "^4.4.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.13",
+    "pg": "^8.12.0",
+    "prom-client": "^15.1.2",
+    "typescript": "^5.5.2",
+    "stripe": "^16.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^20.11.17",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^6.4.15",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.22.2",
+    "hono-rate-limiter": "^0.3.0",
+    "tsx": "^4.7.1"
+  }
+}
