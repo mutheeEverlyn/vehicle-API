@@ -10,13 +10,15 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
     "types": [
       "node"
     ],
   },
   "include": [
-    "src/**/*"
-, "src/locationBranches/locationBranches.controller.ts"  ],
+    "src/**/*"],
   "exclude": [
     "node_modules",
     "dist"

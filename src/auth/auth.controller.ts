@@ -1,9 +1,8 @@
 import 'dotenv/config';
 import { Context } from 'hono';
-import { createAuthUserService, userLoginService, emailByUserId } from './auth.service';
+import { createAuthUserService, userLoginService } from './auth.service';
 import bcrypt from 'bcrypt';
 import { sign } from 'hono/jwt';
-import { sendEmail } from "../mailer";
 import assert from 'assert';
 
 assert(process.env.JWT_SECRET);
@@ -22,18 +21,6 @@ export const registerUser = async (c: Context) => {
 
     if (!userId) return c.text("User not created", 404);
 
-    const email = await emailByUserId(userId);
-    if (!email) {
-      return c.json({ error: 'Email not found for the given user ID' }, 404);
-    }
-
-    // Send the email
-    try {
-      await sendEmail(email, user.full_name);
-    } catch (error) {
-      console.error("Error sending welcome email:", error);
-      return c.json({ error: "Failed to send email but user registered successfully" }, 500);
-    }
 
     return c.json({ msg: 'User created successfully' }, 201);
   } catch (error: any) {

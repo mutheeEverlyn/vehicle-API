@@ -65,17 +65,17 @@ export const userLoginService = async (user: UserDetails) => {
 
 };
 
-export const emailByUserId = async (id: number): Promise<string | null> => {
-    const result = await db.query.usersTable.findFirst({
-      columns: {
-        email: true,
-      },
-      where: (usersTable, { eq }) => eq(usersTable.user_id, id),
-    });
+// export const emailByUserId = async (id: number): Promise<string | null> => {
+//     const result = await db.query.usersTable.findFirst({
+//       columns: {
+//         email: true,
+//       },
+//       where: (usersTable, { eq }) => eq(usersTable.user_id, id),
+//     });
   
-    if (!result) {
-      return null;
-    }
+//     if (!result) {
+//       return null;
+//     }
   
-    return result.email;
-  };
+//     return result.email;
+//   };
