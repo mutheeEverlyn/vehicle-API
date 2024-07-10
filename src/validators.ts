@@ -73,7 +73,7 @@ export const locationBranchesSchema = z.object({
 
 export const fleetManagementSchema = z.object({
     vehicle_id: z.number(),
-    acquisition_date: z.date(),
+    acquisition_date: z.string(),
     depreciation_rate: z.number(),
     current_value:z.number(),
     maintenance_cost:z.number(),
