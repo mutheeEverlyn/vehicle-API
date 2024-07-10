@@ -9,11 +9,11 @@ Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvb
 GET http://localhost:8000/vehicleSpecificationsData
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
 ###
-GET http://localhost:8000/fleetManagementData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
+GET http://localhost:8000/fleetManagement
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
 ###
 GET http://localhost:8000/customerSupportTicketsData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
 ###
 GET http://localhost:8000/bookings
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
@@ -25,7 +25,7 @@ GET http://localhost:8000/bookingsData
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
 ###
 GET http://localhost:8000/users
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIwNzE1OTMwfQ.n4sITlqsr57fOosHRH7C2pFgLneD8jXTFdWC1f6plsc
 ###
 GET http://localhost:8000/locationBranches
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
@@ -66,20 +66,48 @@ Content-Type: application/json
      "role":"user"
 }
 ###
+
+POST http://localhost:8000/fleetManagement
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Content-Type: application/json
+
+{
+   
+    "vehicle_id":8,
+    "acquisition_date":"2023-3-5",
+    "depreciation_rate": 10,
+     "current_value": 20000,
+     "maintenance_cost":5000,
+     "status":"sdfghjk"
+}
+###
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+   
+    "full_name": "Abel Kibira",
+    "email":"A@gmail.com",
+    "contact_phone": "+254187324234",
+     "address": "marwa, Kenya",
+     "password":"pass",
+     "role":"user"
+}
+###
 POST http://localhost:8000/vehicle
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
 Content-Type: application/json
 
 {
 
-    "vehicleSpec_id": 1,
+    "vehicleSpec_id": 4,
     "rental_rate": 20,
     "availability":"available"
 }
 
 ###
 POST http://localhost:8000/vehicleSpecifications
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
 Content-Type: application/json
 
 {
@@ -96,7 +124,7 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:8000/bookings
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDU3NTQ1NH0.S2VUEoQcMp4WckOlJdFK5vrcwNPnAwBw9dmu5I-8bM0
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIwNzE1OTMwfQ.n4sITlqsr57fOosHRH7C2pFgLneD8jXTFdWC1f6plsc
 Content-Type: application/json
 
 {
@@ -107,6 +135,29 @@ Content-Type: application/json
    "return_date": "2021-2-5",
    "total_amount": 20000,
    "booking_status": "booked"
+}
+###
+POST http://localhost:8000/customerSupportTickets
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjA3MzYwODN9.MFHkYqZloNj5yjEZRZFFALP1e0Wpmyt2JMv80bxy5_8
+Content-Type: application/json
+
+{
+   "user_id": 6,
+   "subject": "sdfghjk",
+   "description": "sdfghjk",
+   "status": "okay"
+}
+###
+POST http://localhost:8000/locationBranches
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Content-Type: application/json
+
+{
+   
+   "name": "sagana",
+   "address": " kohgf",
+   "contact_phone": "3456789"
+   
 }
 
 ###
@@ -127,6 +178,6 @@ POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "email": "kim@gmail.com",
+    "email": "job@gmail.com",
     "password":"password"
 }
