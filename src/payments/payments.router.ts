@@ -5,7 +5,7 @@ import { paymentsSchema } from "../validators";
 import { adminRoleAuth,userRoleAuth,userAdminRoleAuth} from "../middleware/bearAuth";
 export const paymentsRouter = new Hono();
 
-paymentsRouter .get("/payments",adminRoleAuth, listPayments);
+paymentsRouter .get("/payments",userRoleAuth, listPayments);
 paymentsRouter .get("/payments/:id",userAdminRoleAuth, getPayments)
 paymentsRouter .post("/payments",zValidator('json',paymentsSchema,(result,c) =>{
     if(!result.success){
