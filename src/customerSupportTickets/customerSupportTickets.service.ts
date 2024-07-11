@@ -42,12 +42,12 @@ export const customerSupportTicketsData = async () => {
         }
     })
 }
-export const createCustomerSupportTicketsService = async (customerSupportTickets:any):Promise<string | null>  => {
+export const createCustomerSupportTicketsService = async (customerSupportTickets:tiCustomerSupportTickets):Promise<string | null>  => {
     await db.insert(customerSupportTicketsTable).values(customerSupportTickets)
     return "CustomerSupportTickets created successfully";
 }
 
-export const updateCustomerSupportTicketsService = async (id: number, customerSupportTickets: any):Promise<string | null> => {
+export const updateCustomerSupportTicketsService = async (id: number, customerSupportTickets: tiCustomerSupportTickets):Promise<string | null> => {
     await db.update(customerSupportTicketsTable).set(customerSupportTickets).where(eq(customerSupportTicketsTable.ticket_id, id))
     return "CustomerSupportTickets updated successfully";
 }
