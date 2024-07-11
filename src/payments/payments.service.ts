@@ -2,7 +2,7 @@ import { eq } from "drizzle-orm";
 import db from "../drizzle/db";
 import { paymentsTable, tsPayments,tiPayments} from "../drizzle/schema"
 import {stripe} from '../drizzle/db'
-import { error } from "console";
+
 
 
 
@@ -68,7 +68,7 @@ export const createPaymentsService = async (paymentData: tiPayments) => {
   
     return { message: 'Payment created successfully', client_secret: paymentIntent.client_secret };
   };
-export const updatePaymentsService = async (id: number, payments: any):Promise<string | null>  => {
+export const updatePaymentsService = async (id: number, payments: tiPayments):Promise<string | null>  => {
     await db.update(paymentsTable).set(payments).where(eq(paymentsTable.payment_id, id))
     return "payments updated successfully";
 }
