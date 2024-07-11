@@ -59,12 +59,12 @@ export const bookingsData= async ()  => {
     })
 }
 
-export const createBookingsService = async ( bookings:any):Promise<string | null>  => {
+export const createBookingsService = async ( bookings:tiBookings):Promise<string | null>  => {
     await db.insert(bookingsTable).values( bookings)
     return "bookings created successfully";
 }
 
-export const updateBookingsService = async (id: number,  bookings: any):Promise<string | null>  => {
+export const updateBookingsService = async (id: number,  bookings: tiBookings):Promise<string | null>  => {
     await db.update(bookingsTable).set(bookings).where(eq(bookingsTable.booking_id, id))
     return "bookings updated successfully";
 }
