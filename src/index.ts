@@ -1,6 +1,5 @@
 import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
-import Stripe from 'stripe';
 import 'dotenv/config';
 import { logger } from 'hono/logger';
 import { csrf } from 'hono/csrf';
@@ -25,27 +24,6 @@ dotenv.config();
 
 const app = new Hono();
 
-const stripeSecretApiKey = process.env.STRIPE_SECRET_API_KEY as string;
-const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET as string;
-if (!stripeSecretApiKey || !stripeWebhookSecret) {
-  throw new Error('Stripe secret keys are not defined in the environment variables');
-}
-const stripe = new Stripe(stripeSecretApiKey, {
-  apiVersion: '2024-06-20',
-});
-
-app.post('/create-payment-intent', async (c) => {
-  const { amount, currency } = await c.req.json();
-  try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount,
-      currency,
-    });
-    return c.json({ clientSecret: paymentIntent.client_secret });
-  } catch (error) {
-    return c.json({ error: (error as Error).message }, 400);
-  }
-});
 
 app.use(cors({
   origin: '*',
