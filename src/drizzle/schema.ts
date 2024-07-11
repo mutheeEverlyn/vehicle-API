@@ -69,7 +69,7 @@ export const paymentsTable = pgTable("payments", {
   booking_id: integer("booking_id").notNull().references(() => bookingsTable.booking_id, { onDelete: "cascade" }),
   amount: integer("amount"),
   payment_status: text("payment_status").default("pending"),
-  payment_date: timestamp("payment_date"),
+  payment_date: timestamp("payment_date").notNull().defaultNow(),
   payment_method: text("payment_method"),
   transaction_id: text("transaction_id"),
   created_at: timestamp("created_at", { mode: "string" }).notNull().defaultNow(),
