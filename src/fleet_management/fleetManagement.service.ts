@@ -43,12 +43,12 @@ export const fleetManagementData= async () => {
         }
     })
 }
-export const createFleetManagementService = async (fleetManagement:any):Promise<string | null>  => {
+export const createFleetManagementService = async (fleetManagement:tiFleetManagement):Promise<string | null>  => {
     await db.insert(fleetManagementTable).values(fleetManagement)
     return "fleetManagement created successfully";
 }
 
-export const updateFleetManagementService = async (id: number, fleetManagement: any):Promise<string | null>  => {
+export const updateFleetManagementService = async (id: number, fleetManagement: tiFleetManagement):Promise<string | null>  => {
     await db.update(fleetManagementTable).set(fleetManagement).where(eq(fleetManagementTable.fleet_id, id))
     return "fleetManagement updated successfully";
 }
