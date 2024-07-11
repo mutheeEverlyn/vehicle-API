@@ -48,9 +48,9 @@ export const paymentsSchema = z.object({
     booking_id: z.number(),
     amount: z.number(),
     payment_status: z.string(),
-    payment_date: z.date(),
+    payment_date: z.string().optional(),
     payment_method: z.string(),
-    transaction_id: z.string(),
+    transaction_id: z.string().optional(),
     created_at:z.string().optional(),
     updated_at:z.string().optional()
 })
