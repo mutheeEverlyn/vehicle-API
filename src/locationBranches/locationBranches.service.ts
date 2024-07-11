@@ -30,12 +30,12 @@ export const getLocationBranchesService = async (id: number) => {
 //         }
 //     })
 // }
-export const createLocationBranchesService = async (locationBranches:any):Promise<string | null>  => {
+export const createLocationBranchesService = async (locationBranches:tiLocationBranches):Promise<string | null>  => {
     await db.insert(locationBranchesTable).values(locationBranches)
     return "locationBranches created successfully";
 }
 
-export const updateLocationBranchesService = async (id: number, locationBranches: any):Promise<string | null>   => {
+export const updateLocationBranchesService = async (id: number, locationBranches:tiLocationBranches):Promise<string | null>   => {
     await db.update(locationBranchesTable).set(locationBranches).where(eq(locationBranchesTable.location_id, id))
     return "locationBranches updated successfully";
 }
