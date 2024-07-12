@@ -64,6 +64,7 @@ export const loginUser = async (c: Context) => {
       const responseInfo = {
         token,
         user: {
+          user_id:userExist?.user_id,
           role: userExist?.role,
           full_name: userExist?.full_name,
           email: userExist?.email,
