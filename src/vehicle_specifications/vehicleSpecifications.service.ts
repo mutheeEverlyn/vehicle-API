@@ -33,12 +33,12 @@ export const vehicleSpecificationsData = async () => {
         }
     });
 }
-export const createVehicleSpecificationsService = async (vehicleSpecifications:any):Promise<string | null>  => {
+export const createVehicleSpecificationsService = async (vehicleSpecifications:tiVehicleSpecifications):Promise<string | null>  => {
     await db.insert(vehicleSpecificationsTable).values(vehicleSpecifications)
     return "vehicle specifications created successfully";
 }
 
-export const updateVehicleSpecificationsService = async (id: number, vehicleSpecifications: any):Promise<string | null> => {
+export const updateVehicleSpecificationsService = async (id: number, vehicleSpecifications: tiVehicleSpecifications):Promise<string | null> => {
     await db.update(vehicleSpecificationsTable).set(vehicleSpecifications).where(eq(vehicleSpecificationsTable.vehicleSpec_id, id))
     return "vehicle specifications updated successfully";
 }
