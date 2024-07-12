@@ -49,6 +49,7 @@ export const userLoginService = async (user: UserDetails) => {
   const {email, password } = user;
   return await db.query.usersTable.findFirst({
     columns: {
+      user_id:true,
       email:true,
       full_name:true,
       role:true
