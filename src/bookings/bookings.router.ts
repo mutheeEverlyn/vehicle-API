@@ -6,18 +6,18 @@ import { adminRoleAuth,userRoleAuth,userAdminRoleAuth} from "../middleware/bearA
 export const bookingsRouter = new Hono();
 
 
-bookingsRouter.get("/bookings",adminRoleAuth, listBookings);
+bookingsRouter.get("/bookings",userRoleAuth, listBookings);
 
-bookingsRouter.get("/bookingsData",adminRoleAuth, getBookingsData);
+bookingsRouter.get("/bookingsData",userAdminRoleAuth, getBookingsData);
 
-bookingsRouter.get("/bookings/:id",userAdminRoleAuth, getBookings);
+bookingsRouter.get("/bookings/:id",userRoleAuth, getBookings);
 
 bookingsRouter.post("/bookings",zValidator('json',bookingsSchema,(result,c) =>{
     if(!result.success){
         return c.json(result.error,400)
     }
-}) ,adminRoleAuth,createBookings);
+}) ,userRoleAuth,createBookings);
 
-bookingsRouter.put("/bookings/:id",adminRoleAuth, updateBookings);
+bookingsRouter.put("/bookings/:id",userRoleAuth, updateBookings);
 
-bookingsRouter.delete("/bookings/:id",adminRoleAuth, deleteBookings);
+bookingsRouter.delete("/bookings/:id",userRoleAuth, deleteBookings);
