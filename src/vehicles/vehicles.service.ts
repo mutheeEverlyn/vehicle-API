@@ -45,12 +45,12 @@ export const vehicleData= async () => {
     
 }
 
-export const createVehicleService = async (vehicle:any):Promise<string | null>   => {
+export const createVehicleService = async (vehicle:tiVehicle):Promise<string | null>   => {
     await db.insert(vehiclesTable).values(vehicle)
     return "vehicle created successfully";
 }
 
-export const updateVehicleService = async (id: number, vehicle: any):Promise<string | null>  => {
+export const updateVehicleService = async (id: number, vehicle:tiVehicle):Promise<string | null>  => {
     await db.update(vehiclesTable).set(vehicle).where(eq(vehiclesTable.vehicle_id, id))
     return "vehicle updated successfully";
 }
