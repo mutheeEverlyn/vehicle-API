@@ -5,14 +5,14 @@ import { zValidator } from "@hono/zod-validator";
 import { userSchema } from "../validators";
 export const userRouter = new Hono();
 
-userRouter.get("/users",adminRoleAuth, listUsers);
+userRouter.get("/users",userAdminRoleAuth, listUsers);
 
 userRouter.get("/users/:id",userAdminRoleAuth, getUser); 
 userRouter.post("/users",zValidator('json',userSchema,(result,c) =>{
     if(!result.success){
         return c.json(result.error,400)
     }
-}), adminRoleAuth,createUser);  
+}),userAdminRoleAuth,createUser);  
 userRouter.put("/users/:id",adminRoleAuth, updateUser);
 
 userRouter.delete("/users/:id",adminRoleAuth, deleteUser);
