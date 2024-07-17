@@ -1,6 +1,9 @@
 import { Context } from "hono";
-import { paymentsService, getPaymentsService, createPaymentsService, updatePaymentsService, deletePaymentsService,paymentsData} from "./payments.service";
-
+import Stripe from 'stripe';
+import { paymentsService, getPaymentsService, createPaymentService, updatePaymentsService, deletePaymentsService,paymentsData} from "./payments.service";
+const stripe = new Stripe(process.env.STRIPE_SECRET_API_KEY as string, {
+    apiVersion: '2024-06-20',
+  });
 export const listPayments = async (c: Context) => {
     try {
         const limit = Number(c.req.query('limit'))
@@ -34,20 +37,115 @@ export const getPaymentsData = async (c: Context) => {
       return c.json({ error: error?.message }, 500);
     }
   };
-export const createPayments = async (c: Context) => {
+// export const createPayments = async (c: Context) => {
+//     try {
+//         const payments = await c.req.json();
+//         const createdPayments = await createPaymentService(payments);
+
+
+//         if (!createdPayments) return c.text("payments not created", 404);
+//         return c.json({ msg: createdPayments }, 201);
+
+//     } catch (error: any) {
+//         return c.json({ error: error?.message }, 400)
+//     }
+// }
+// export const createPaymentIntent = async (c: Context) => {
+//     const { amount } = await c.req.json();
+    
+//     try {
+//       const paymentIntent = await stripe.paymentIntents.create({
+//         amount: amount,
+//         currency: 'usd',
+//       });
+  
+//       return c.json({ client_secret: paymentIntent.client_secret });
+//     } catch (error:any) {
+//       return c.json({ error: error.message }, 400);
+//     }
+//   };
+const paymentService = createPaymentService();
+
+export const createPayment = {
+  async createCheckoutSession(c: Context) {
     try {
-        const payments = await c.req.json();
-        const createdPayments = await createPaymentsService(payments);
+      const { booking_id, amount } = await c.req.json();
+      console.log(
+       ` Check if id and amount is being received: ${booking_id}, amount: ${amount}`
+      );
 
+      const session = await paymentService.createCheckoutSession(
+        booking_id,
+        amount
+      );
 
-        if (!createdPayments) return c.text("payments not created", 404);
-        return c.json({ msg: createdPayments }, 201);
-
-    } catch (error: any) {
-        return c.json({ error: error?.message }, 400)
+      return c.json({ sessionId: session.id , checkoutUrl: session.url});
+     
+    } catch (error) {
+      console.error("Error creating checkout session:", error);
+      return c.json(
+        { success: false, error: "Failed to create checkout session" },
+        500
+      );
     }
-}
+  },
+  //testing of checkout session
 
+  async testCreateCheckoutSession(c: Context) {
+    try {
+      // For testing, we'll use hardcoded values
+      const booking_id = 1;
+      const amount = 10000; // $100
+      console.log(
+        `Testing checkout session inpts for bookingId: ${booking_id}, amount: ${amount}`
+      );
+
+      const session = await paymentService.createCheckoutSession(
+        booking_id,
+        amount
+      );
+      ///trying to update data on mytables once successful
+      await paymentService.handleSuccessfulPayment(session.id);
+
+      return c.json({
+        success: true,
+        sessionId: session.id,
+        checkoutUrl: session.url,
+      });
+    } catch (error) {
+      console.error("Error creating checkout session:", error);
+      return c.json(
+        { success: false, error: "Failed to create checkout session" },
+        500
+      );
+    }
+  },
+
+  ///end of test
+
+  async handleWebhook(c: Context) {
+    const sig = c.req.header("stripe-signature");
+    const rawBody = await c.req.raw.text();
+
+    try {
+      const event = stripe.webhooks.constructEvent(
+        rawBody,
+        sig!,
+        process.env.STRIPE_WEBHOOK_SECRET!
+      );
+
+      if (event.type === "checkout.session.completed") {
+        const session = event.data.object;
+        await paymentService.handleSuccessfulPayment(session.id);
+      }
+
+      return c.json({ received: true });
+    } catch (err) {
+      console.error(err);
+      return c.json({ error: "Webhook error" }, 400);
+    }
+  },
+};
 export const updatePayments = async (c: Context) => {
     const id = parseInt(c.req.param("id"));
     if (isNaN(id)) return c.text("Invalid ID", 400);
