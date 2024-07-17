@@ -27,18 +27,7 @@ export const getLocationBranches = async (c: Context) => {
     }
     return c.json(locationBranches, 200);
 }
-// data
-// export const getLocationBranchesData= async (c: Context) => {
-//     try {
-//         const data= await locationBranchesData();
-//         if (data == null || data.length == 0){
-//         return c.text("locationBranchesData not found", 404);
-//         }
-//         return c.json(data,200);
-//     } catch (error: any) {
-//         return c.json({ error: error?.message }, 400)
-//     }
-// }
+
 export const createLocationBranches = async (c: Context) => {
     try {
         const locationBranches= await c.req.json();
