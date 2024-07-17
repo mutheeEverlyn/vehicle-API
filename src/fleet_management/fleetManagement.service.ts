@@ -23,6 +23,7 @@ export const getFleetManagementService = async (id: number) => {
 export const fleetManagementData= async () => {
     return await db.query.fleetManagementTable.findMany({
         columns:{
+            fleet_id:true,
           acquisition_date:true,
           depreciation_rate:true,
           current_value:true,
@@ -38,6 +39,8 @@ export const fleetManagementData= async () => {
                     created_at:true,
                     updated_at:true,
                     rental_rate:true,
+                    vehicle_id:true,
+                    vehicleSpec_id:true
                 }
             }
         }
