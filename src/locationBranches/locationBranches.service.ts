@@ -17,19 +17,6 @@ export const getLocationBranchesService = async (id: number) => {
         where: eq(locationBranchesTable.location_id, id)
     })
 }
-// data
-// export const locationBranchesData= async ()  => {
-//     return await db.query.locationBranchesTable.findMany({
-//         columns:{
-//             name:true,
-//             address:true,
-//             contact_phone:true,
-//            created_at:true,
-//            updated_at:true
-        
-//         }
-//     })
-// }
 export const createLocationBranchesService = async (locationBranches:tiLocationBranches):Promise<string | null>  => {
     await db.insert(locationBranchesTable).values(locationBranches)
     return "locationBranches created successfully";
