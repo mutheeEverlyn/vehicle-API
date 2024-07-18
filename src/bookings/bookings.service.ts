@@ -21,6 +21,10 @@ export const getBookingsService = async (id: number) => {
 export const bookingsData= async ()  => {
     return await db.query.bookingsTable.findMany({
         columns:{
+            booking_id:true,
+            location_id:true,
+            user_id:true,
+            vehicle_id:true,
           booking_date:true,
           return_date:true,
           total_amount:true,
@@ -30,6 +34,7 @@ export const bookingsData= async ()  => {
         },with:{
            vehicle :{
                 columns:{
+                vehicleSpec_id:true,
                  rental_rate:true,
                  availability:true,
                  created_at:true,
