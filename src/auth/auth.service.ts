@@ -7,9 +7,9 @@ const registrationSchema = z.object({
   full_name: z.string(),
   email: z.string().email(),
   password: z.string(),
-  contact_phone: z.string().optional(),
-  address: z.string().optional(),
-  role: z.enum(["admin", "user", "userAdminRoleAuth"]).optional()
+  contact_phone: z.string(),
+  address: z.string(),
+  role: z.enum(["admin", "user", "userAdminRoleAuth"]).optional(),
 });
 
 type RegistrationInfo = z.infer<typeof registrationSchema>;
