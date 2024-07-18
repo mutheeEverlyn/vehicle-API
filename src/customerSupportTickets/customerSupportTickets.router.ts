@@ -6,9 +6,9 @@ import { adminRoleAuth,userRoleAuth,userAdminRoleAuth} from "../middleware/bearA
 export const customerSupportTicketsRouter = new Hono();
 
 
-customerSupportTicketsRouter.get("/customerSupportTickets",adminRoleAuth, listCustomerSupportTickets);
+customerSupportTicketsRouter.get("/customerSupportTickets",userAdminRoleAuth, listCustomerSupportTickets);
 
-customerSupportTicketsRouter.get("/customerSupportTicketsData",adminRoleAuth, customerSupportTickets);
+customerSupportTicketsRouter.get("/customerSupportTicketsData",userAdminRoleAuth, customerSupportTickets);
 
 customerSupportTicketsRouter.get("/customerSupportTickets/:id",userAdminRoleAuth, getCustomerSupportTickets)
 
@@ -18,7 +18,7 @@ customerSupportTicketsRouter.post("/customerSupportTickets",zValidator('json',cu
     }
 }), userRoleAuth,createCustomerSupportTickets)
 
-customerSupportTicketsRouter.put("/ customerSupportTickets/:id",adminRoleAuth, updateCustomerSupportTickets)
+customerSupportTicketsRouter.put("/customerSupportTickets/:id",adminRoleAuth, updateCustomerSupportTickets)
 
-customerSupportTicketsRouter.delete("/ customerSupportTickets/:id",adminRoleAuth, deleteCustomerSupportTickets)
+customerSupportTicketsRouter.delete("/customerSupportTickets/:id",adminRoleAuth, deleteCustomerSupportTickets)
 
