@@ -19,11 +19,11 @@ export const getCustomerSupportTickets= async (c: Context) => {
     const id = parseInt(c.req.param("id"));
     if (isNaN(id)) return c.text("Invalid ID", 400);
 
-    const orders = await getCustomerSupportTicketsService(id);
-    if (orders== undefined) {
+    const customerTickets = await getCustomerSupportTicketsService(id);
+    if (customerTickets== undefined) {
         return c.text("CustomerSupportTickets not found", 404);
     }
-    return c.json(orders, 200);
+    return c.json(customerTickets, 200);
 }
 
 // data
