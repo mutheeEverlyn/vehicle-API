@@ -23,6 +23,8 @@ export const getCustomerSupportTicketsService = async (id: number) => {
 export const customerSupportTicketsData = async () => {
     return await db.query.customerSupportTicketsTable.findMany({
         columns:{
+            user_id:true,
+            ticket_id:true,
            subject:true,
            description:true,
            status:true,
