@@ -26,6 +26,7 @@ export const vehicleSpecificationsTable = pgTable("vehicle_specifications", {
   transmission: text("transmission"),
   seating_capacity: integer("seating_capacity"),
   color: text("color"),
+  images:text("images"),
   features: text("features"),
 });
 
