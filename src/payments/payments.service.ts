@@ -39,31 +39,6 @@ export const paymentsData= async ()  => {
         }
     })
 }
-
-
-
-// export const createPaymentsService = async (paymentData: tiPayments) => {
-//     if (paymentData.booking_id === undefined) {
-//       throw new Error("Booking id required");
-//     }
-  
-//     const paymentIntent = await stripe.paymentIntents.create({
-//       amount: Number(paymentData.amount) * 100,
-//       currency: 'usd',
-//       metadata: { booking_id: paymentData.booking_id.toString() }, // Ensure booking_id is a string
-//     });
-  
-//     await db.insert(paymentsTable).values({
-//       booking_id: paymentData.booking_id,
-//       amount: paymentData.amount,
-//       payment_status: 'Pending',
-//       payment_method: paymentData.payment_method,
-//       transaction_id: paymentIntent.id,
-//       payment_date: new Date(),
-//     }).execute();
-  
-//     return { message: 'Payment created successfully', client_secret: paymentIntent.client_secret };
-//   };
 export const createPaymentService = () => {
     return {
       async createCheckoutSession(booking_id: number, amount: number) {
