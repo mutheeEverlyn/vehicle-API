@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS "payments" (
 	"booking_id" integer NOT NULL,
 	"amount" integer,
 	"payment_status" text DEFAULT 'pending',
-	"payment_date" timestamp,
+	"payment_date" timestamp DEFAULT now() NOT NULL,
 	"payment_method" text,
 	"transaction_id" text,
 	"created_at" timestamp DEFAULT now() NOT NULL,
@@ -90,6 +90,7 @@ CREATE TABLE IF NOT EXISTS "vehicle_specifications" (
 	"transmission" text,
 	"seating_capacity" integer,
 	"color" text,
+	"images" text,
 	"features" text
 );
 --> statement-breakpoint

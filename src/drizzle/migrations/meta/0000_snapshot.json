@@ -1,5 +1,5 @@
 {
-  "id": "8876740b-584a-4339-932d-8176a9c3bd91",
+  "id": "a275e163-a98c-415d-a831-e8eb21c78f6a",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -402,7 +402,8 @@
           "name": "payment_date",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true,
+          "default": "now()"
         },
         "payment_method": {
           "name": "payment_method",
@@ -574,6 +575,12 @@
         },
         "color": {
           "name": "color",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "images": {
+          "name": "images",
           "type": "text",
           "primaryKey": false,
           "notNull": false
