@@ -4,57 +4,57 @@ GET http://localhost:8000/ok
 GET http://localhost:8000/timeout
 ###
 GET http://localhost:8000/vehicleData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTQwNDAzNH0.39UKIWQVz7-aFaweCpJFht3d2kLEq7KfRNfWtNjJjW8
 ###
 GET http://localhost:8000/vehicleSpecificationsData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
-GET http://localhost:8000/fleetManagement
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+GET http://localhost:8000/fleetManagementData
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 GET http://localhost:8000/customerSupportTicketsData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
-GET http://localhost:8000/bookings
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+GET http://localhost:8000/bookings/13
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjExMzM2NjB9.32FclpnChnwNnnMRZr3waAAOSmMe7j4jnKnlU5xwp1U
 ######
 GET http://localhost:8000/payments
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 
 ######
 GET http://localhost:8000/bookingsData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 GET http://localhost:8000/users
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIwNzE1OTMwfQ.n4sITlqsr57fOosHRH7C2pFgLneD8jXTFdWC1f6plsc
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 GET http://localhost:8000/locationBranches
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 GET http://localhost:8000/locationBranches/1
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 GET http://localhost:8000/payments
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 GET http://localhost:8000/paymentsData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 GET http://localhost:8000/vehicle/1
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 PUT http://localhost:8000/payments/1
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 
 {
   "amount":40000
 }
 ###
 DELETE http://localhost:8000/users/10
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 ###
 POST http://localhost:8000/users
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 Content-Type: application/json
 
 {
@@ -69,7 +69,7 @@ Content-Type: application/json
 ###
 
 POST http://localhost:8000/fleetManagement
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 Content-Type: application/json
 
 {
@@ -83,26 +83,38 @@ Content-Type: application/json
 }
 ###
 
-POST http://localhost:8000/payments
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+POST https://vehicle-api-5bvc.onrender.com/create-checkout-session
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjExMzM2NjB9.32FclpnChnwNnnMRZr3waAAOSmMe7j4jnKnlU5xwp1U
 Content-Type: application/json
 
 {
    
-    "booking_id":2,
-    "amount": 1000,
+    "booking_id":1,
+    "amount": 15000,
      "payment_status": "Pending",
     "payment_method": "Card"
 }
 ###
+POST http://localhost:8000/create-checkout-session
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjExMzM2NjB9.32FclpnChnwNnnMRZr3waAAOSmMe7j4jnKnlU5xwp1U
+Content-Type: application/json
+
+{
+   
+    "booking_id":1,
+    "amount": 15000,
+    "payment_status": "Pending",
+    "payment_method": "Card"
+}
+###
 POST http://localhost:8000/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 Content-Type: application/json
 
 {
    
     "full_name": "Abel Kibira",
-    "email":"Abel@gmail.com",
+    "email":"Abel1@gmail.com",
     "contact_phone": "+254187324234",
      "address": "marwa, Kenya",
      "password":"pass",
@@ -110,7 +122,7 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:8000/vehicle
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 Content-Type: application/json
 
 {
@@ -121,50 +133,41 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8000/vehicleSpecifications
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
-Content-Type: application/json
+PUT http://localhost:8000/vehicleSpecifications/2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqdW5ldmFtZGVlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTQ3OTYyMX0.rSvQyYbFuq8ZJf7Dfyb-sIwi5QQ-WpbKIWPf83DgBIc
 
 {
-   
-   "manufacturer":"toyota",
-    "model":"harrier",
-   "year":2023,
-   "fuel_type":"petrol",
-   "engine_capacity":"21c",
-   "transmission":"good",
-   "seating_capacity":9,
-    "color":"silver",
-    "features": "6 months used"
+  "images":"https://i.pinimg.com/564x/49/6a/ad/496aad6753e634854e03ed350d31b72a.jpg" 
+  
 }
 ###
 POST http://localhost:8000/bookings
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIwNzE1OTMwfQ.n4sITlqsr57fOosHRH7C2pFgLneD8jXTFdWC1f6plsc
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjExMzM2NjB9.32FclpnChnwNnnMRZr3waAAOSmMe7j4jnKnlU5xwp1U
 Content-Type: application/json
 
 {
-   "user_id": 4,
-   "vehicle_id": 5,
-   "location_id": 3,
+   "user_id": 12,
+   "vehicle_id": 6,
+   "location_id": 1,
    "booking_date": "2021-2-3",
    "return_date": "2021-2-5",
-   "total_amount": 20000,
-   "booking_status": "booked"
+   "total_amount": 20000
+   
 }
 ###
 POST http://localhost:8000/customerSupportTickets
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjA3MzYwODN9.MFHkYqZloNj5yjEZRZFFALP1e0Wpmyt2JMv80bxy5_8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjEwNTE2NjN9.mzVFhDc3FLCfGIsBzPdBZm5zNgom_ItZKEo6tbMbIJE
 Content-Type: application/json
 
 {
-   "user_id": 1,
-   "subject": "sdfghjk",
-   "description": "sdfghjk",
-   "status": "okay"
+   "user_id": 8,
+   "subject": "khghhjoi98",
+   "description": "olpkwsa",
+   "status": "good"
 }
 ###
 POST http://localhost:8000/locationBranches
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJFdmFoQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDczNDE5Mn0.GbsGlpiItnI923JbenX4hvK_92SEZPoQJzLGQlUVvsU
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
 Content-Type: application/json
 
 {
@@ -180,12 +183,12 @@ POST http://localhost:8000/register
 Content-Type: application/json
 
 {
-     "full_name":"kimani",
-     "email":"kimani@gmail.com",
+     "full_name":"Everlyn Muthoni",
+     "email":"junevamdee@gmail.com",
     "password":"password",
-    "contact_phone":"0987654esx",
-    "address":"dfgh8765",
-    "role":"user"
+    "contact_phone":"09876540987",
+    "address":"Nyeri",
+    "role":"userAdminRoleAuth"
 }
 
 ###
@@ -193,6 +196,6 @@ POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "email": "job@gmail.com",
+    "email": "junevamdee@gmail.com",
     "password":"password"
 }
