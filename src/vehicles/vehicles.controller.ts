@@ -30,6 +30,7 @@ export const getVehicle = async (c: Context) => {
 export const vehicle= async (c: Context) => {
     try {
         const data = await vehicleData();
+        console.log(data)
         if (data == null || data.length == 0) {
             return c.text("vehicle not found", 404)
         }
