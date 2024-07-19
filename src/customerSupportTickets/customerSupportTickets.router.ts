@@ -18,7 +18,7 @@ customerSupportTicketsRouter.post("/customerSupportTickets",zValidator('json',cu
     }
 }), userRoleAuth,createCustomerSupportTickets)
 
-customerSupportTicketsRouter.put("/customerSupportTickets/:id",adminRoleAuth, updateCustomerSupportTickets)
+customerSupportTicketsRouter.put("/customerSupportTickets/:id",userAdminRoleAuth, updateCustomerSupportTickets)
 
 customerSupportTicketsRouter.delete("/customerSupportTickets/:id",adminRoleAuth, deleteCustomerSupportTickets)
 
