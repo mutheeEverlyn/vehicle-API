@@ -136,6 +136,7 @@ app.get('/', (c) => {
 });
 
 app.get('/ok', (c) => {
+  console.log('hello')
   return c.text('The server is running!');
 });
 
@@ -156,6 +157,7 @@ app.route("/", customerSupportTicketsRouter);
 app.route("/", locationBranchesRouter);
 app.route("/", fleetManagementRouter);
 app.route("/", authRouter);
+
 
 app.use(limiter);
 
