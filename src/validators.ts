@@ -11,14 +11,14 @@ export const userSchema = z.object({
     updated_at:z.string().optional()
 })
 
-export const vehicleSchema = z.object({
-    vehicleSpec_id: z.number(),
-    rental_rate: z.number(),
-    availability: z.string(),
-    created_at:z.string().optional(),
-    updated_at:z.string().optional(),
+// export const vehicleSchema = z.object({
+//     vehicleSpec_id: z.number(),
+//     rental_rate: z.number(),
+//     availability: z.string(),
+//     created_at:z.string().optional(),
+//     updated_at:z.string().optional(),
     
-})
+// })
 
 export const vehicleSpecificationsSchema = z.object({
     manufacturer:z.string(),
@@ -29,6 +29,7 @@ export const vehicleSpecificationsSchema = z.object({
     transmission:z.string(),
     seating_capacity:z.number(),
     color:z.string(),
+    images:z.string(),
     features: z.string()
 })
 
@@ -36,10 +37,10 @@ export const bookingsSchema = z.object({
     user_id: z.number(),
     vehicle_id: z.number(),
     location_id: z.number(),
-    booking_date: z.string(),
-    return_date: z.string(),
+    booking_date: z.string().optional(),
+    return_date: z.string().optional(),
     total_amount: z.number(),
-    booking_status: z.string(),
+    booking_status: z.string().optional(),
     created_at:z.string().optional(),
     updated_at:z.string().optional(),
 })
