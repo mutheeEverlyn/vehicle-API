@@ -26,7 +26,6 @@ export const vehicleSpecificationsTable = pgTable("vehicle_specifications", {
   transmission: text("transmission"),
   seating_capacity: integer("seating_capacity"),
   color: text("color"),
-  images:text("images"),
   features: text("features"),
 });
 
@@ -36,6 +35,7 @@ export const vehiclesTable = pgTable("vehicles", {
   vehicleSpec_id: integer("vehicleSpec_id").notNull().references(() => vehicleSpecificationsTable.vehicleSpec_id, { onDelete: "cascade" }),
   rental_rate: integer("rental_rate"),
   availability: text("availability"),
+  images:text("images"),
   created_at: timestamp("created_at", { mode: "string" }).notNull().defaultNow(),
   updated_at: timestamp("updated_at", { mode: "string" }).notNull().defaultNow(),
 });
