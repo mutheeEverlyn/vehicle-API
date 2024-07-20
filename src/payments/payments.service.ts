@@ -20,6 +20,9 @@ export const getPaymentsService = async (id: number) => {
 export const paymentsData= async ()  => {
     return await db.query.paymentsTable.findMany({
         columns:{
+          payment_method:true,
+          transaction_id:true,
+          payment_id:true,
            amount:true,
            payment_status:true,
            payment_date:true,
@@ -28,6 +31,10 @@ export const paymentsData= async ()  => {
         },with:{
            booking:{
                 columns:{
+                  user_id:true,
+                  booking_id:true,
+                  location_id:true,
+                  vehicle_id:true,
                   booking_date:true,
                   return_date:true,
                   total_amount:true,
