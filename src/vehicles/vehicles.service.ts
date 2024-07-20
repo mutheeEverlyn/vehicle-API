@@ -29,7 +29,6 @@ export const createVehicleService=async(vehicle:vehicleInfo):Promise<number|null
     transmission:parsedData.transmission,
     seating_capacity:parsedData.seating_capacity,
     color:parsedData.color,
-    images:parsedData.images,
     features:parsedData.features,
     }).returning({vehicleSpec_id:vehicleSpecificationsTable.vehicleSpec_id})
     const vehicleSpec_id=vehicleRecord[0]?.vehicleSpec_id;
@@ -37,7 +36,8 @@ export const createVehicleService=async(vehicle:vehicleInfo):Promise<number|null
     await db.insert(vehiclesTable).values({
     vehicleSpec_id:vehicleSpec_id,
     rental_rate: parsedData.rental_rate,
-    availability:parsedData.availability,  
+    availability:parsedData.availability,
+    images:parsedData.images,  
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString()
     })
@@ -64,6 +64,7 @@ export const vehicleData= async () => {
               vehicle_id:true,
               rental_rate:true,
               availability:true,
+              images:true,
               created_at:true,
               updated_at:true
         },
@@ -78,7 +79,6 @@ export const vehicleData= async () => {
                     transmission:true,
                     seating_capacity:true,
                     color:true,
-                    images:true,
                     features:true,
                 }
             }
