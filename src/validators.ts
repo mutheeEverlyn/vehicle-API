@@ -29,7 +29,6 @@ export const vehicleSpecificationsSchema = z.object({
     transmission:z.string(),
     seating_capacity:z.number(),
     color:z.string(),
-    images:z.string(),
     features: z.string()
 })
 
