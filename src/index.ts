@@ -148,7 +148,7 @@ app.get('/timeout', async (c) => {
 app.get('/metrics', printMetrics);
 
 // Custom routes
-app.route("/", userRouter); // /users
+app.route("/", userRouter); 
 app.route("/", vehicleSpecificationsRouter);
 app.route("/", vehicleRouter);
 app.route("/", bookingsRouter);
