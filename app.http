@@ -4,13 +4,13 @@ GET http://localhost:8000/ok
 GET http://localhost:8000/timeout
 ###
 GET http://localhost:8000/vehicleData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTQwNDAzNH0.39UKIWQVz7-aFaweCpJFht3d2kLEq7KfRNfWtNjJjW8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTU1OTA5NX0.qsPwwz_l1FQWtGpJmflD-WwIWZDIQroxlYuwaTwfqSI
 ###
 GET http://localhost:8000/vehicleSpecificationsData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTQwNDAzNH0.39UKIWQVz7-aFaweCpJFht3d2kLEq7KfRNfWtNjJjW8
 ###
 GET http://localhost:8000/fleetManagementData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTQwNDAzNH0.39UKIWQVz7-aFaweCpJFht3d2kLEq7KfRNfWtNjJjW8
 ###
 GET http://localhost:8000/customerSupportTicketsData
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
@@ -18,8 +18,8 @@ Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvb
 GET http://localhost:8000/bookings/13
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2JAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3MjExMzM2NjB9.32FclpnChnwNnnMRZr3waAAOSmMe7j4jnKnlU5xwp1U
 ######
-GET http://localhost:8000/payments
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
+GET http://localhost:8000/paymentsData
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTU1OTA5NX0.qsPwwz_l1FQWtGpJmflD-WwIWZDIQroxlYuwaTwfqSI
 
 ######
 GET http://localhost:8000/bookingsData
@@ -133,11 +133,11 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:8000/vehicleSpecifications/2
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqdW5ldmFtZGVlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTQ3OTYyMX0.rSvQyYbFuq8ZJf7Dfyb-sIwi5QQ-WpbKIWPf83DgBIc
+PUT http://localhost:8000/vehicle/19
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTU1OTA5NX0.qsPwwz_l1FQWtGpJmflD-WwIWZDIQroxlYuwaTwfqSI
 
 {
-  "images":"https://i.pinimg.com/564x/49/6a/ad/496aad6753e634854e03ed350d31b72a.jpg" 
+  "images":"https://i.pinimg.com/236x/99/ac/72/99ac72fbd8cf2bf25da13c6b9a45bd85.jpg" 
   
 }
 ###
