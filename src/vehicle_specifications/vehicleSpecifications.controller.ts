@@ -61,7 +61,7 @@ export const updateVehicleSpecifications = async (c: Context) => {
         const searchedVehicleSpecifications = await getVehicleSpecificationsService(id);
         if (searchedVehicleSpecifications == undefined) return c.text("vehicle specifications not found", 404);
         const res = await updateVehicleSpecificationsService(id, vehicleSpecifications);
-        if (!res) return c.text("vahicle specifications not updated", 404);
+        if (!res) return c.text("vehicle specifications not updated", 404);
 
         return c.json({ msg: res }, 201);
     } catch (error: any) {

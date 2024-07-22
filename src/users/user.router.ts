@@ -13,6 +13,6 @@ userRouter.post("/users",zValidator('json',userSchema,(result,c) =>{
         return c.json(result.error,400)
     }
 }),userAdminRoleAuth,createUser);  
-userRouter.put("/users/:id",adminRoleAuth, updateUser);
+userRouter.put("/users/:id",userAdminRoleAuth, updateUser);
 
 userRouter.delete("/users/:id",adminRoleAuth, deleteUser);

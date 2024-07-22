@@ -4,7 +4,7 @@ GET http://localhost:8000/ok
 GET http://localhost:8000/timeout
 ###
 GET http://localhost:8000/vehicleData
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTU1OTA5NX0.qsPwwz_l1FQWtGpJmflD-WwIWZDIQroxlYuwaTwfqSI
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTczMTk3MX0.RXKfMuF-MdQJnrkuh8_W6GJZ4gteM6EeAMubLBMQc44
 ###
 GET http://localhost:8000/vehicleSpecificationsData
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTQwNDAzNH0.39UKIWQVz7-aFaweCpJFht3d2kLEq7KfRNfWtNjJjW8
@@ -69,7 +69,7 @@ Content-Type: application/json
 ###
 
 POST http://localhost:8000/fleetManagement
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTczMTk3MX0.RXKfMuF-MdQJnrkuh8_W6GJZ4gteM6EeAMubLBMQc44
 Content-Type: application/json
 
 {
@@ -79,7 +79,7 @@ Content-Type: application/json
     "depreciation_rate": 10,
      "current_value": 20000,
      "maintenance_cost":5000,
-     "status":"sdfghjk"
+     "status":"service"
 }
 ###
 
@@ -121,15 +121,12 @@ Content-Type: application/json
      "role":"user"
 }
 ###
-POST http://localhost:8000/vehicle
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
-Content-Type: application/json
+PUT http://localhost:8000/vehicleSpecifications/15
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTU1OTA5NX0.qsPwwz_l1FQWtGpJmflD-WwIWZDIQroxlYuwaTwfqSI
 
 {
 
-    "vehicleSpec_id": 4,
-    "rental_rate": 20,
-    "availability":"available"
+    "features":"Four wheel"
 }
 
 ###
@@ -167,13 +164,13 @@ Content-Type: application/json
 }
 ###
 POST http://localhost:8000/locationBranches
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMDg5NTg3MX0.NMlaE09tTkEffoqZKUUZ6c7jU8jPsouLWDYy5MIOZOM
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwYXVsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMTU1OTA5NX0.qsPwwz_l1FQWtGpJmflD-WwIWZDIQroxlYuwaTwfqSI
 Content-Type: application/json
 
 {
    
-   "name": "sagana",
-   "address": " kohgf",
+   "name": "Nyeri",
+   "address": " skuta",
    "contact_phone": "3456789"
    
 }
@@ -196,6 +193,6 @@ POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "email": "junevamdee@gmail.com",
+    "email": "paul@gmail.com",
     "password":"password"
 }
