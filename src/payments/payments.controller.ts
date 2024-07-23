@@ -37,33 +37,7 @@ export const getPaymentsData = async (c: Context) => {
       return c.json({ error: error?.message }, 500);
     }
   };
-// export const createPayments = async (c: Context) => {
-//     try {
-//         const payments = await c.req.json();
-//         const createdPayments = await createPaymentService(payments);
 
-
-//         if (!createdPayments) return c.text("payments not created", 404);
-//         return c.json({ msg: createdPayments }, 201);
-
-//     } catch (error: any) {
-//         return c.json({ error: error?.message }, 400)
-//     }
-// }
-// export const createPaymentIntent = async (c: Context) => {
-//     const { amount } = await c.req.json();
-    
-//     try {
-//       const paymentIntent = await stripe.paymentIntents.create({
-//         amount: amount,
-//         currency: 'usd',
-//       });
-  
-//       return c.json({ client_secret: paymentIntent.client_secret });
-//     } catch (error:any) {
-//       return c.json({ error: error.message }, 400);
-//     }
-//   };
 const paymentService = createPaymentService();
 
 export const createPayment = {
