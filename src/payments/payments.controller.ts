@@ -78,7 +78,7 @@ export const createPayment = {
         booking_id,
         amount
       );
-      ///trying to update data on mytables once successful
+      /// update data payments table once successful
       await paymentService.handleSuccessfulPayment(session.id);
 
       return c.json({
